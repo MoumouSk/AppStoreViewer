@@ -1,5 +1,6 @@
 import UIKit
 import PlaygroundSupport
+@testable import AppStoreViewerFramework
 
 public protocol DataFetching {
     func fetchData(url: URL, completion: @escaping (Data?, Error?) -> Void)
@@ -17,11 +18,7 @@ extension DataFetching {
     }
 }
 
-public struct App {
-    
-    let name: String
-    let summary: String
-    let thumbImageUrl: String
+extension App: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case name = "im:name"
@@ -33,8 +30,6 @@ public struct App {
         case label
     }
     
-    var tempThumbImageUrl = ""
-    
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let nameContainer = try container.nestedContainer(keyedBy: LabelKeys.self, forKey: .name)
@@ -43,6 +38,7 @@ public struct App {
         name = try nameContainer.decode(String.self, forKey: .label)
         summary = try summaryContainer.decode(String.self, forKey: .label)
         
+        var tempThumbImageUrl = ""
         while !imagesContainer.isAtEnd {
             let imageContainer = try imagesContainer.nestedContainer(keyedBy: LabelKeys.self)
             tempThumbImageUrl = try imageContainer.decode(String.self, forKey: LabelKeys.label)
@@ -51,8 +47,6 @@ public struct App {
         thumbImageUrl = tempThumbImageUrl
     }
 }
-
-extension App: Decodable {}
 
 extension App: Listable {
     public var text: String {

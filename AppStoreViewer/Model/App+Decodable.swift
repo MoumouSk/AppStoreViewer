@@ -9,7 +9,6 @@
 import Foundation
 
 extension App: Decodable {
-    
     private enum CodingKeys: String, CodingKey {
         case name = "im:name"
         case summary

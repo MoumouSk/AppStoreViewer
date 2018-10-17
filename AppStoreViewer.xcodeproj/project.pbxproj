@@ -21,6 +21,15 @@
 		D5496982217771C700E73965 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496980217771C700E73965 /* DataFetching.swift */; };
 		D5496984217771F900E73965 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496983217771F900E73965 /* AppStoreRessource.swift */; };
 		D5496985217771F900E73965 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496983217771F900E73965 /* AppStoreRessource.swift */; };
+		D5DAABEB2177829800074679 /* ImageAndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEA2177829800074679 /* ImageAndTableViewCell.swift */; };
+		D5DAABF2217787B500074679 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEE217787B500074679 /* ReusableView.swift */; };
+		D5DAABF3217787B500074679 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEE217787B500074679 /* ReusableView.swift */; };
+		D5DAABF4217787B500074679 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEF217787B500074679 /* UIView+Anchor.swift */; };
+		D5DAABF5217787B500074679 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEF217787B500074679 /* UIView+Anchor.swift */; };
+		D5DAABF6217787B500074679 /* UIViewController+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABF0217787B500074679 /* UIViewController+Anchor.swift */; };
+		D5DAABF7217787B500074679 /* UIViewController+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABF0217787B500074679 /* UIViewController+Anchor.swift */; };
+		D5DAABF8217787B500074679 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABF1217787B500074679 /* UIViewController+Container.swift */; };
+		D5DAABF9217787B500074679 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABF1217787B500074679 /* UIViewController+Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,12 @@
 		D549697D2177718300E73965 /* App+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Decodable.swift"; sourceTree = "<group>"; };
 		D5496980217771C700E73965 /* DataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetching.swift; sourceTree = "<group>"; };
 		D5496983217771F900E73965 /* AppStoreRessource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreRessource.swift; sourceTree = "<group>"; };
+		D5DAABE82177798500074679 /* CellPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CellPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D5DAABEA2177829800074679 /* ImageAndTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndTableViewCell.swift; sourceTree = "<group>"; };
+		D5DAABEE217787B500074679 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		D5DAABEF217787B500074679 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		D5DAABF0217787B500074679 /* UIViewController+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Anchor.swift"; sourceTree = "<group>"; };
+		D5DAABF1217787B500074679 /* UIViewController+Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Container.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,7 @@
 				D549696C21776F5B00E73965 /* Model */,
 				D54967B82177694800E73965 /* AppDelegate.swift */,
 				D54967BA2177694800E73965 /* ViewController.swift */,
+				D5DAABED217787B500074679 /* Helpers */,
 				D54967D82177696B00E73965 /* SupportingFiles */,
 			);
 			path = AppStoreViewer;
@@ -133,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D549696B21776EDA00E73965 /* TopApp.playground */,
+				D5DAABE82177798500074679 /* CellPlayground.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 				D549697D2177718300E73965 /* App+Decodable.swift */,
 				D5496980217771C700E73965 /* DataFetching.swift */,
 				D5496983217771F900E73965 /* AppStoreRessource.swift */,
+				D5DAABEA2177829800074679 /* ImageAndTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +173,17 @@
 				D549697721776FA300E73965 /* Info.plist */,
 			);
 			path = AppStoreViewerFramework;
+			sourceTree = "<group>";
+		};
+		D5DAABED217787B500074679 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5DAABEE217787B500074679 /* ReusableView.swift */,
+				D5DAABEF217787B500074679 /* UIView+Anchor.swift */,
+				D5DAABF0217787B500074679 /* UIViewController+Anchor.swift */,
+				D5DAABF1217787B500074679 /* UIViewController+Container.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,10 +328,15 @@
 			files = (
 				D5496981217771C700E73965 /* DataFetching.swift in Sources */,
 				D549696E21776F6B00E73965 /* App.swift in Sources */,
+				D5DAABF8217787B500074679 /* UIViewController+Container.swift in Sources */,
+				D5DAABEB2177829800074679 /* ImageAndTableViewCell.swift in Sources */,
+				D5DAABF2217787B500074679 /* ReusableView.swift in Sources */,
 				D549697E2177718300E73965 /* App+Decodable.swift in Sources */,
 				D5496984217771F900E73965 /* AppStoreRessource.swift in Sources */,
 				D54967BB2177694800E73965 /* ViewController.swift in Sources */,
+				D5DAABF6217787B500074679 /* UIViewController+Anchor.swift in Sources */,
 				D54967B92177694800E73965 /* AppDelegate.swift in Sources */,
+				D5DAABF4217787B500074679 /* UIView+Anchor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,9 +353,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D549697C21776FB800E73965 /* App.swift in Sources */,
+				D5DAABF3217787B500074679 /* ReusableView.swift in Sources */,
+				D5DAABF7217787B500074679 /* UIViewController+Anchor.swift in Sources */,
 				D549697F2177718300E73965 /* App+Decodable.swift in Sources */,
+				D5DAABF9217787B500074679 /* UIViewController+Container.swift in Sources */,
 				D5496982217771C700E73965 /* DataFetching.swift in Sources */,
 				D5496985217771F900E73965 /* AppStoreRessource.swift in Sources */,
+				D5DAABF5217787B500074679 /* UIView+Anchor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

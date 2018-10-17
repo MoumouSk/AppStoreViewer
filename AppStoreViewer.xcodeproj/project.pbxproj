@@ -34,6 +34,7 @@
 		D54967C92177695400E73965 /* AppStoreViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54967CD2177695400E73965 /* AppStoreViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewerTests.swift; sourceTree = "<group>"; };
 		D54967CF2177695400E73965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D549696B21776EDA00E73965 /* TopApp.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TopApp.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		D54967AC2177694800E73965 = {
 			isa = PBXGroup;
 			children = (
+				D549696A21776EB900E73965 /* Playgrounds */,
 				D54967B72177694800E73965 /* AppStoreViewer */,
 				D54967CC2177695400E73965 /* AppStoreViewerTests */,
 				D54967B62177694800E73965 /* Products */,
@@ -99,6 +101,14 @@
 				D54967C12177695400E73965 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D549696A21776EB900E73965 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				D549696B21776EDA00E73965 /* TopApp.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

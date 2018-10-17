@@ -15,6 +15,12 @@
 		D549696E21776F6B00E73965 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D549696D21776F6B00E73965 /* App.swift */; };
 		D549697821776FA300E73965 /* AppStoreViewerFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D549697621776FA300E73965 /* AppStoreViewerFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D549697C21776FB800E73965 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D549696D21776F6B00E73965 /* App.swift */; };
+		D549697E2177718300E73965 /* App+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D549697D2177718300E73965 /* App+Decodable.swift */; };
+		D549697F2177718300E73965 /* App+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D549697D2177718300E73965 /* App+Decodable.swift */; };
+		D5496981217771C700E73965 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496980217771C700E73965 /* DataFetching.swift */; };
+		D5496982217771C700E73965 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496980217771C700E73965 /* DataFetching.swift */; };
+		D5496984217771F900E73965 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496983217771F900E73965 /* AppStoreRessource.swift */; };
+		D5496985217771F900E73965 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496983217771F900E73965 /* AppStoreRessource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,9 @@
 		D549697421776FA300E73965 /* AppStoreViewerFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppStoreViewerFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D549697621776FA300E73965 /* AppStoreViewerFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreViewerFramework.h; sourceTree = "<group>"; };
 		D549697721776FA300E73965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D549697D2177718300E73965 /* App+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Decodable.swift"; sourceTree = "<group>"; };
+		D5496980217771C700E73965 /* DataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetching.swift; sourceTree = "<group>"; };
+		D5496983217771F900E73965 /* AppStoreRessource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreRessource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				D549696D21776F6B00E73965 /* App.swift */,
+				D549697D2177718300E73965 /* App+Decodable.swift */,
+				D5496980217771C700E73965 /* DataFetching.swift */,
+				D5496983217771F900E73965 /* AppStoreRessource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,7 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5496981217771C700E73965 /* DataFetching.swift in Sources */,
 				D549696E21776F6B00E73965 /* App.swift in Sources */,
+				D549697E2177718300E73965 /* App+Decodable.swift in Sources */,
+				D5496984217771F900E73965 /* AppStoreRessource.swift in Sources */,
 				D54967BB2177694800E73965 /* ViewController.swift in Sources */,
 				D54967B92177694800E73965 /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D549697C21776FB800E73965 /* App.swift in Sources */,
+				D549697F2177718300E73965 /* App+Decodable.swift in Sources */,
+				D5496982217771C700E73965 /* DataFetching.swift in Sources */,
+				D5496985217771F900E73965 /* AppStoreRessource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

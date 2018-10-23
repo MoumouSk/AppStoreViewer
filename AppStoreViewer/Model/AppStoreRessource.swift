@@ -43,7 +43,6 @@ public class AppStoreRessources : DataFetching {
             catch {
                 parseError = error
             }
-            
         }
     }
 }

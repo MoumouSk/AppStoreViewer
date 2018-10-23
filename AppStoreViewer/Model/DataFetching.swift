@@ -20,6 +20,6 @@ extension DataFetching {
             DispatchQueue.main.async {
                 completion(data, error)
             }
-            }.resume()
+        }.resume()
     }
 }

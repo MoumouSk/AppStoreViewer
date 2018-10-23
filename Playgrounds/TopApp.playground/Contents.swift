@@ -1,4 +1,4 @@
-import UIKit
+    import UIKit
 import PlaygroundSupport
 @testable import AppStoreViewerFramework
 
@@ -38,32 +38,7 @@ public class ImageAndTextTableViewCell: UITableViewCell {
         addSubview(stackView)
         
         anchor(view: stackView)
-        
     }
-    
-//    public override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//       stackView.frame = bounds
-//    }
-}
-
-extension App: Listable {
-    public var text: String {
-        return name
-    }
-    public var longText: String {
-        return summary
-    }
-    public var imageUrl: String {
-        return thumbImageUrl
-    }
-}
-
-public protocol Listable {
-    var text: String { get }
-    var longText: String { get }
-    var imageUrl: String { get }
 }
 
 class AppsViewController: UITableViewController {
@@ -93,21 +68,10 @@ class AppsViewController: UITableViewController {
         
         if let imageCell = cell as? ImageAndTextTableViewCell {
             imageCell.label.text = app.longText
-            
-            let url = URL(string: app.imageUrl)
-            
-            URLSession.shared.dataTask(with: url!) { data, _, _ in
-                guard let data = data else { return }
-                
-                print(data)
-                DispatchQueue.main.async {
-                    let image = UIImage(data: data)
-                    
-                    imageCell.rightImageview.image = image
-                    imageCell.rightImageview.contentMode = .scaleAspectFit
-//                    imageCell.setNeedsUpdateConstraints()
-                    }
-                }.resume()
+            app.getThumbnailFromUrl(urlString: app.imageUrl) { (data) in
+                imageCell.rightImageview.image = data
+            }
+            imageCell.rightImageview.contentMode = .scaleAspectFit
         }
         return cell
     }

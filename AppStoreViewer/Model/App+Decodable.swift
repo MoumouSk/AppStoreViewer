@@ -35,4 +35,39 @@ extension App: Decodable {
         }
         thumbImageUrl = tempThumbImageUrl
     }
+    
+    public func getThumbnailFromUrl(urlString: String, completion: @escaping (UIImage?)-> Void) {
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with: url!) { data, _, _ in
+            guard let data = data else { return }
+            
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                completion(image)
+            }
+        }.resume()
+    }
+}
+
+public protocol Listable {
+    var text: String { get }
+    var longText: String { get }
+    var imageUrl: String { get }
+    func getThumbnailFromUrl(urlString: String, completion: @escaping (UIImage?)-> Void)
+    }
+
+extension Listable {
+    public func getThumbnailFromUrl(urlString: String, completion: @escaping (UIImage?)-> Void) {}
+}
+
+extension App: Listable {
+    public var text: String {
+        return name
+    }
+    public var longText: String {
+        return summary
+    }
+    public var imageUrl: String {
+        return thumbImageUrl
+    }
 }

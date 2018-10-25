@@ -11,5 +11,5 @@ import Foundation
 public struct App  {
     let name: String
     let summary: String
-    let thumbImageUrl: String
+    var thumbImageUrl: String
 }

@@ -1,48 +1,8 @@
-    import UIKit
+import UIKit
 import PlaygroundSupport
-@testable import AppStoreViewerFramework
-
-public class ImageAndTextTableViewCell: UITableViewCell {
-    
-    let stackView = UIStackView()
-    let label = UILabel()
-    let rightImageview = UIImageView()
-    
-    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        commonInit()
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        
-        label.numberOfLines = 2
-        stackView.axis = .horizontal
-       
-        stackView.distribution = .fillProportionally
-        
-        stackView.alignment = .center
-        stackView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
-        stackView.spacing = 5
-        stackView.isLayoutMarginsRelativeArrangement = true
-        
-        stackView.addArrangedSubview(label)
-        stackView.addArrangedSubview(rightImageview)
-        
-        addSubview(stackView)
-        
-        anchor(view: stackView)
-    }
-}
+@testable import AppStoreViewerFramework 
 
 class AppsViewController: UITableViewController {
-    
     public var apps = [Listable]() {
         didSet {
             tableView.reloadData()
@@ -51,7 +11,6 @@ class AppsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(ImageAndTextTableViewCell.self, forCellReuseIdentifier: "Default")
@@ -68,8 +27,13 @@ class AppsViewController: UITableViewController {
         
         if let imageCell = cell as? ImageAndTextTableViewCell {
             imageCell.label.text = app.longText
-            app.getThumbnailFromUrl(urlString: app.imageUrl) { (data) in
-                imageCell.rightImageview.image = data
+            
+            if let urlToFetch = URL(string: app.imageUrl) {
+                app.fetchData(url: urlToFetch) { (data, error) in
+                    if let data = data {
+                        imageCell.rightImageview.image = UIImage(data: data)
+                    }
+                }
             }
             imageCell.rightImageview.contentMode = .scaleAspectFit
         }
@@ -80,9 +44,8 @@ class AppsViewController: UITableViewController {
 let appsViewController = AppsViewController()
 let ressource = AppStoreRessources()
 
-ressource.getTopApps(top: 100) { (apps, error) in
-    print(apps)
-    print(error ?? "Clean")
+ressource.getTopApps(top: 20) { (apps, error) in
+    //print(error ?? "\(apps)\nApps loaded successfully")
     appsViewController.apps = apps
 }
 

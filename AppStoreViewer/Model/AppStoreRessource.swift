@@ -19,23 +19,18 @@ public class AppStoreRessources : DataFetching {
     }
     
     public func getTopApps(top: Int, completion: @escaping ([App], Error?) -> Void) {
-        
         let urlString = "https://itunes.apple.com/fr/rss/toppaidapplications/limit=\(top)/json"
-        let url = URL(string: urlString)
+        guard let url = URL(string: urlString) else { return }
         
-        fetchData(url: url!) { (data, dataError) in
+        fetchData(url: url) { (data, dataError) in
             var apps = [App]()
             var parseError = dataError
-            
             defer {
                 completion(apps, parseError)
             }
-            
-            guard let data = data else {
-                return
-            }
-            
+            guard let data = data else { return }
             do {
+                assert(top > 0, "Top must be a positive number.")
                 let jsonDecoder = JSONDecoder()
                 let serverResponse = try jsonDecoder.decode(ServerResponse.self, from: data)
                 apps = serverResponse.feed.entry

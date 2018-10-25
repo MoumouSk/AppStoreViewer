@@ -15,7 +15,7 @@ public protocol DataFetching {
 extension DataFetching {
     public func fetchData(url: URL, completion: @escaping (Data?, Error?) -> Void) {
         let session = URLSession.shared
-        
+
         session.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {
                 completion(data, error)

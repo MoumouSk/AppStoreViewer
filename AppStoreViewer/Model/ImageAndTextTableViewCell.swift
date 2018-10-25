@@ -16,34 +16,25 @@ public class ImageAndTextTableViewCell: UITableViewCell {
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         commonInit()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commonInit()
     }
     
     private func commonInit() {
-        
+        label.numberOfLines = 2
         stackView.axis = .horizontal
-        stackView.alignment = .center
         stackView.distribution = .fillProportionally
+        stackView.alignment = .center
         stackView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
         stackView.spacing = 5
         stackView.isLayoutMarginsRelativeArrangement = true
-        
         stackView.addArrangedSubview(label)
         stackView.addArrangedSubview(rightImageview)
-        
         addSubview(stackView)
-    }
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        stackView.frame = bounds
-        backgroundColor = UIColor.red
+        anchor(view: stackView)
     }
 }

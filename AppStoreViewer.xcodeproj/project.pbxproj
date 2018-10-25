@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D53C34B321806FD500367FA4 /* ImageAndTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEA2177829800074679 /* ImageAndTextTableViewCell.swift */; };
 		D54967B92177694800E73965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54967B82177694800E73965 /* AppDelegate.swift */; };
 		D54967BB2177694800E73965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54967BA2177694800E73965 /* ViewController.swift */; };
 		D54967C02177695400E73965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54967BF2177695400E73965 /* Assets.xcassets */; };
@@ -21,7 +22,7 @@
 		D5496982217771C700E73965 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496980217771C700E73965 /* DataFetching.swift */; };
 		D5496984217771F900E73965 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496983217771F900E73965 /* AppStoreRessource.swift */; };
 		D5496985217771F900E73965 /* AppStoreRessource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5496983217771F900E73965 /* AppStoreRessource.swift */; };
-		D5DAABEB2177829800074679 /* ImageAndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEA2177829800074679 /* ImageAndTableViewCell.swift */; };
+		D5DAABEB2177829800074679 /* ImageAndTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEA2177829800074679 /* ImageAndTextTableViewCell.swift */; };
 		D5DAABF2217787B500074679 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEE217787B500074679 /* ReusableView.swift */; };
 		D5DAABF3217787B500074679 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEE217787B500074679 /* ReusableView.swift */; };
 		D5DAABF4217787B500074679 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAABEF217787B500074679 /* UIView+Anchor.swift */; };
@@ -61,7 +62,7 @@
 		D5496980217771C700E73965 /* DataFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetching.swift; sourceTree = "<group>"; };
 		D5496983217771F900E73965 /* AppStoreRessource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreRessource.swift; sourceTree = "<group>"; };
 		D5DAABE82177798500074679 /* CellPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CellPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D5DAABEA2177829800074679 /* ImageAndTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndTableViewCell.swift; sourceTree = "<group>"; };
+		D5DAABEA2177829800074679 /* ImageAndTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndTextTableViewCell.swift; sourceTree = "<group>"; };
 		D5DAABEE217787B500074679 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D5DAABEF217787B500074679 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		D5DAABF0217787B500074679 /* UIViewController+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Anchor.swift"; sourceTree = "<group>"; };
@@ -161,7 +162,7 @@
 				D549697D2177718300E73965 /* App+Decodable.swift */,
 				D5496980217771C700E73965 /* DataFetching.swift */,
 				D5496983217771F900E73965 /* AppStoreRessource.swift */,
-				D5DAABEA2177829800074679 /* ImageAndTableViewCell.swift */,
+				D5DAABEA2177829800074679 /* ImageAndTextTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,7 +330,7 @@
 				D5496981217771C700E73965 /* DataFetching.swift in Sources */,
 				D549696E21776F6B00E73965 /* App.swift in Sources */,
 				D5DAABF8217787B500074679 /* UIViewController+Container.swift in Sources */,
-				D5DAABEB2177829800074679 /* ImageAndTableViewCell.swift in Sources */,
+				D5DAABEB2177829800074679 /* ImageAndTextTableViewCell.swift in Sources */,
 				D5DAABF2217787B500074679 /* ReusableView.swift in Sources */,
 				D549697E2177718300E73965 /* App+Decodable.swift in Sources */,
 				D5496984217771F900E73965 /* AppStoreRessource.swift in Sources */,
@@ -360,6 +361,7 @@
 				D5496982217771C700E73965 /* DataFetching.swift in Sources */,
 				D5496985217771F900E73965 /* AppStoreRessource.swift in Sources */,
 				D5DAABF5217787B500074679 /* UIView+Anchor.swift in Sources */,
+				D53C34B321806FD500367FA4 /* ImageAndTextTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

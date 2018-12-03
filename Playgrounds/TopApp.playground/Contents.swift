@@ -21,7 +21,6 @@ class AppsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Default", for: indexPath)
         let app = apps[indexPath.row]
         
@@ -44,7 +43,7 @@ class AppsViewController: UITableViewController {
 let appsViewController = AppsViewController()
 let ressource = AppStoreRessources()
 
-ressource.getTopApps(top: 20) { (apps, error) in
+ressource.getTopApps(top: 100) { (apps, error) in
     //print(error ?? "\(apps)\nApps loaded successfully")
     appsViewController.apps = apps
 }

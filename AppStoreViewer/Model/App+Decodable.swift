@@ -21,16 +21,14 @@ extension App: Decodable {
     }
     
     public init(from decoder: Decoder) throws {
-        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let nameContainer = try container.nestedContainer(keyedBy: LabelKeys.self, forKey: .name)
         let summaryContainer = try container.nestedContainer(keyedBy: LabelKeys.self, forKey: .summary)
         var imagesContainer = try container.nestedUnkeyedContainer(forKey: .image)
+        let imageContainer = try imagesContainer.nestedContainer(keyedBy: LabelKeys.self)
         
         name = try nameContainer.decode(String.self, forKey: .label)
         summary = try summaryContainer.decode(String.self, forKey: .label)
-    
-        let imageContainer = try imagesContainer.nestedContainer(keyedBy: LabelKeys.self)
         thumbImageUrl = try imageContainer.decode(String.self, forKey: LabelKeys.label)
     }
 }
